@@ -23,10 +23,10 @@ class Person:
 
 Person.myMethod()
 
-p1=Person("Mike",20,"m")
-print(p1.Name)
+# p1=Person("Mike",20,"m")
+# print(p1.Name)
 
-p1.myMethod()
-p1.Name="BOB"
+# p1.myMethod()
+# p1.Name="BOB"
 
-print(p1.Name)
+# print(p1.Name)

@@ -1,4 +1,10 @@
 import logging
+import employee
+
+
+
+
+
 
 # DEBUG: Detailed information, typically of interest only when diagnosing problems.
 
@@ -11,7 +17,25 @@ import logging
 # CRITICAL: A serious error, indicating that the program itself may be unable to continue running.
 
 
-logging.basicConfig(filename='text.log',level=logging.DEBUG,format='%(asctime)s:%(levelname)s:%(message)s')
+logger=logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+formatter=logging.Formatter('%(asctime)s:%(levelname)s:%(message)s')
+
+file_handler=logging.FileHandler('sample.log')
+file_handler.setLevel(logging.ERROR)
+
+file_handler.setFormatter(formatter)
+stream_handler=logging.StreamHandler()
+
+
+logger.addHandler(file_handler)
+logger.addHandler(stream_handler)
+
+
+# logging.basicConfig(filename='text.log',level=logging.DEBUG,format='%(asctime)s:%(levelname)s:%(message)s')
+
+
 
 def add(x, y):
     """Add Function"""
@@ -30,22 +54,27 @@ def multiply(x, y):
 
 def divide(x, y):
     """Divide Function"""
-    return x / y
+    try:
+        result=x/y
+    except  ZeroDivisionError:
+        logger.exception("Tried To Divide By Error")
+    else:
+        return result
+    
 
 
-num_1 = 20
-num_2 = 10
+num_1 = 0
+num_2 = 0
 
 
-add_result=add(num_1,num_2)
+add_result=divide(num_1,num_2)
 
 # print('Add: {} + {} = {}'.format(num_1, num_2, add_result))
-logging.debug('Add: {} + {} = {}'.format(num_1, num_2, add_result))
-logging.warning('Add: {} + {} = {}'.format(num_1, num_2, add_result))
-logging.info('Add: {} + {} = {}'.format(num_1, num_2, add_result))
-logging.error('Add: {} + {} = {}'.format(num_1, num_2, add_result))
-
-logging.critical('Add: {} + {} = {}'.format(num_1, num_2, add_result))
+logger.debug(   'divide: {} / {} = {}'.format(num_1, num_2, add_result))
+logger.warning( 'divide: {} / {} = {}'.format(num_1, num_2, add_result))
+logger.info(    'divide: {} / {} = {}'.format(num_1, num_2, add_result))
+logger.error(   'divide: {} / {} = {}'.format(num_1, num_2, add_result))
+logger.critical('divide: {} / {} = {}'.format(num_1, num_2, add_result))
 
 # sub_result=subtract(num_1,num_2)
 

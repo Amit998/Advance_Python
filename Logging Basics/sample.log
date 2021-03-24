@@ -1,0 +1,17 @@
+2021-02-18 22:25:50,192:ERROR:Tried To Divide By Error
+2021-02-18 22:25:50,192:ERROR:divide: 0 / 0 = None
+2021-02-18 22:25:50,192:CRITICAL:divide: 0 / 0 = None
+2021-02-18 22:26:12,789:ERROR:Tried To Divide By Error
+Traceback (most recent call last):
+  File "d:/study/python/Advance Python/Logging Basics/main.py", line 55, in divide
+    result=x/y
+ZeroDivisionError: division by zero
+2021-02-18 22:26:12,791:ERROR:divide: 0 / 0 = None
+2021-02-18 22:26:12,791:CRITICAL:divide: 0 / 0 = None
+2021-02-18 22:28:13,531:ERROR:Tried To Divide By Error
+Traceback (most recent call last):
+  File "d:/study/python/Advance Python/Logging Basics/main.py", line 58, in divide
+    result=x/y
+ZeroDivisionError: division by zero
+2021-02-18 22:28:13,543:ERROR:divide: 0 / 0 = None
+2021-02-18 22:28:13,545:CRITICAL:divide: 0 / 0 = None
