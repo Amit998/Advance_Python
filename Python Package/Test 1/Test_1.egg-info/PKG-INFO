@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: Test-1
+Version: 0.0.13
+Summary: This is Test 1
+Home-page: UNKNOWN
+Author: Amit Dutta
+Author-email: <damitlucky998@gmail.com>
+License: UNKNOWN
+Description: 
+        # Test 1
+Keywords: python
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
